@@ -1,0 +1,5 @@
+CLASS zbp_mkk_saleshdr_i DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zmkk_saleshdr_i.
+ENDCLASS.
+
+CLASS zbp_mkk_saleshdr_i IMPLEMENTATION.
+ENDCLASS.

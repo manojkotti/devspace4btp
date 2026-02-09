@@ -1,0 +1,5 @@
+@EndUserText.label: 'Sales Service Definition'
+define service ZMKK_SALES_SERVICE_SD {
+  expose ZMKK_SALESHDR_C;
+  expose ZMKK_SALESITM_C;
+}
