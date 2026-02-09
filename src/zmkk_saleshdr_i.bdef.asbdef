@@ -3,7 +3,7 @@ strict ( 2 );
 with draft;
 
 define behavior for ZMKK_SALESHDR_I alias SalesOrderHdr
-persistent table zmk_vbak_t
+persistent table zmkk_vbak_t
 draft table zmk_vbak_d
 lock master total etag LocalLastChangedAt
 authorization master ( global )
@@ -27,7 +27,7 @@ etag master LocalLastChangedAt
 
   association _salesItem { create; with draft; }
 
-  mapping for zmk_vbak_t
+  mapping for zmkk_vbak_t
     {
       SalesDocument       = salesdocument;
       SalesDocumentType   = salesdocumenttype;
@@ -48,7 +48,7 @@ etag master LocalLastChangedAt
 }
 
 define behavior for ZMkK_SALESITM_I alias SalesOrderItm
-persistent table zmk_vbap_t
+persistent table zmkk_vbap_t
 draft table zmk_vbap_d
 lock dependent by _salesHeader
 authorization dependent by _salesHeader
@@ -60,7 +60,7 @@ etag master LocalLastChangedAt
   field ( readonly ) SalesDocument;
   association _salesHeader { with draft; }
 
-  mapping for zmk_vbap_t
+  mapping for zmkk_vbap_t
     {
       SalesDocument      = salesdocument;
       SalesItemnumber    = salesitemnumber;

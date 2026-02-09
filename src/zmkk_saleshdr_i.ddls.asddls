@@ -8,7 +8,7 @@ sizeCategory: #S,
 dataClass: #MIXED
 }
 define root view entity ZMKK_SALESHDR_I
-  as select from zmk_vbak_t as salesHeader
+  as select from zmkk_vbak_t as salesHeader
   composition [0..*] of ZMKK_SALESITM_I as _salesItem
 {
   key salesdocument         as SalesDocument,

@@ -8,7 +8,7 @@ sizeCategory: #S,
 dataClass: #MIXED
 }
 define view entity ZMKK_SALESITM_I
-  as select from zmk_vbap_t as salesItem
+  as select from zmkk_vbap_t as salesItem
   association to parent ZMKK_SALESHDR_I as _salesHeader on $projection.SalesDocument = _salesHeader.SalesDocument
 {
   key salesdocument         as SalesDocument,
